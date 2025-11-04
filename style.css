@@ -194,3 +194,79 @@ img {
   overflow: hidden;
   display: block;
 }
+
+.welcome p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 25px; /* adds space before the button */
+}
+
+.button-link {
+  display: inline-block;
+  background-color: #a32c2c;
+  color: white;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 10px; /* optional extra space */
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px; /* Adds space between blocks */
+  margin: 60px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.about-block {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.about-block:nth-of-type(1) h3 {
+  color: color-mix(in srgb, #6a8fd6 70%, #000);
+}
+.about-block:nth-of-type(2) h3 {
+  color: color-mix(in srgb, #a25dc7 70%, #000);
+}
+.about-block:nth-of-type(3) h3 {
+  color: color-mix(in srgb, #f0a500 70%, #000);
+}
+.about-block:nth-of-type(4) h3 {
+  color: color-mix(in srgb, #53b89c 70%, #000);
+}
+
+.about-block p {
+  color: color-mix(in srgb, #222 80%, #555);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-block strong {
+  color: color-mix(in srgb, #000 80%, #6a8fd6 20%);
+}
+
+.about-block em {
+  color: color-mix(in srgb, #6a8fd6 60%, #000);
+  font-style: italic;
+}
+
+/* Headline */
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #5a8de0;
+  margin-bottom: 40px;
+}
