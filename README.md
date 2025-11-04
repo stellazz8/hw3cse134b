@@ -5,7 +5,7 @@ Based on HW2 music portfolio
 **Deployed site:** [https://hw3cse134b.pages.dev/]
 
 This is a continuation of my HW2 project for CSE134B.  
-For HW3, I will be adding JavaScript interactivity and improving accessibility and usability.
+For HW3, I will be adding CSS interactivity and improving accessibility and usability.
 
 ## Commit Conventions
 - `feat:` – new feature  
