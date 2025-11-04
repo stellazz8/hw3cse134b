@@ -100,48 +100,7 @@ nav {
     }
   }
 }
-/* phone layout */
-@media (max-width: 600px) {
-  body {
-    font-size: 0.9rem;
-    padding: 1rem;
-  }
 
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    display: none; /* hidden by default */
-    flex-direction: column;
-    background: var(--primary-color);
-    border-radius: 8px;
-    padding: 1rem;
-  }
-
-  nav ul.show {
-    display: flex; /* when toggled */
-  }
-
-  nav button.hamburger {
-    display: block;
-    background: none;
-    border: none;
-    color: var(--accent-color);
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  main {
-    grid-template-columns: 1fr;
-  }
-
-  img, iframe {
-    width: 100%;
-    height: auto;
-  }
-}
 
 
 @media (max-width: 768px) {
@@ -392,38 +351,6 @@ dialog button:hover {
   display: none;
 }
 
-@media (max-width: 600px) {
-    header {
-    flex-direction: column;
-    text-align: center;
-    }
-
-  /* Hide regular horizontal nav by default */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: var(--primary-color);
-        border-radius: 10px;
-        padding: 1rem;
-        margin-top: 0.5rem;
-        list-style: none;
-    }
-
-  /* Show nav when checkbox checked */
-    #menu-toggle:checked + label + nav ul {
-        display: flex;
-        animation: slideDown 0.3s ease forwards;
-    }
-    .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: var(--accent-color);
-        cursor: pointer;
-        margin-top: 0.5rem;
-  }
-}
 
 footer {
   margin-top: 3rem;
@@ -487,3 +414,104 @@ h2 {
   margin-top: 0; /* reset default top margin */
   padding-top: 1rem; /* ✅ adds spacing from section edge */
 }
+
+/* --- Header Responsive Refinement --- */
+
+/* Tablet: slightly smaller title and tighter nav */
+@media (max-width: 900px) and (min-width: 601px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    gap: 0.8rem;
+  }
+}
+
+/* --- Mobile (≤600px) layout --- */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    text-align: left;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+    margin: 0;
+  }
+
+  /* Hamburger icon on the right */
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    cursor: pointer;
+  }
+
+  /* Hide regular horizontal nav by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    width: 180px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  /* Show nav when checkbox is toggled */
+  #menu-toggle:checked + label + nav ul {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  img, iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Smooth slide-down animation for mobile nav */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
