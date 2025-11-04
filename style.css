@@ -468,3 +468,13 @@ header h1 {
     margin-right: 2rem;
   }
 }
+
+section iframe,
+section audio {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
