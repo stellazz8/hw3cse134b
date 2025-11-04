@@ -478,3 +478,12 @@ section audio {
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #5a8de0;
+  margin-bottom: 40px;
+  margin-top: 0; /* reset default top margin */
+  padding-top: 1rem; /* ✅ adds spacing from section edge */
+}
