@@ -1,3 +1,13 @@
+/* 
+Baseline 2024 Feature Use:
+Used `color-mix()` to blend theme colors 
+without hard-coding new hex values. 
+
+Used the new `:has()` selector to apply styles 
+to any section that contains media elements, improving 
+semantic styling without extra markup.
+*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -18,7 +28,7 @@
 body {
   font-family: var(--font-main, sans-serif);
   color: var(--primary-color, #3366cc);
-  background-color: var(--bg-color, #ffffff);
+  background-color: color(display-p3 0.97 0.96 0.94);
   line-height: 1.6;
   padding: 2rem 5%;
 }
