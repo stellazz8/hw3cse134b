@@ -435,6 +435,9 @@ footer {
 }
 
 @media (prefers-color-scheme: dark) {
+    nav a:hover {
+        color: var(--accent-color);
+    }
   body {
     background: color-mix(in srgb, #222 80%, #000);
     color: #f3f3f3;
@@ -442,6 +445,12 @@ footer {
   section {
     background: #333;
     box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  }
+  nav ul{
+    background: #222;
+  }
+  nav a{
+    color: #fff;
   }
 }
 
