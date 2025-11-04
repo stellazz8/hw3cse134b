@@ -515,3 +515,36 @@ h2 {
   }
 }
 
+header {
+  position: relative; /* makes the dropdown position relative to header */
+  z-index: 10;
+}
+
+nav ul {
+  position: absolute;
+  top: 60px;
+  right: 1rem;
+  width: 200px;
+  background: color-mix(in srgb, var(--primary-color) 90%, white);
+  border-radius: 10px;
+  padding: 1rem;
+  list-style: none;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* ensures it stays above content */
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+#menu-toggle:checked + label + nav ul {
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.3s ease forwards;
+}
